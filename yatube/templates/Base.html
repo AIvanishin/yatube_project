@@ -14,7 +14,9 @@
     <!-- Подключен файл со стандартными стилями бустрап -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title> {{title}} </title>
+    <title>
+      {{ title }} 
+    </title>
   </head>
   <body>
     <header>
@@ -23,13 +25,14 @@
     <main>
       <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">
-        <h1>{% block title2 %}
-          Какойто заголовок
-        {% endblock %}
+        <h1>
+          {% block title2 %}
+            Какойто заголовок
+          {% endblock %}
         </h1>
         {% block content %}
           Какойто контент
-        {%endblock%}
+        {% endblock %}
         <!-- под последним постом нет линии -->
       </div>  
     </main>
